@@ -38,7 +38,7 @@ plot4 <- function() {
       ## Lower left pane:
       ## Create empty plot with formatting.
       ## Plot points: time vs. each Sub_metering variable converted to numeric class. 
-      ## Add legend and close graphics device.
+      ## Add legend at 90% of normal size and close graphics device.
 
       plot(daytime, as.numeric(hedc$Sub_metering_1), type = "n", 
            ylab = "Energy sub metering", xlab = "")
@@ -46,7 +46,7 @@ plot4 <- function() {
       points(daytime, as.numeric(hedc$Sub_metering_2), type = "l", col = "red")
       points(daytime, as.numeric(hedc$Sub_metering_3), type = "l", col = "blue")
       legend("topright", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
-             col = c("black", "red", "blue"), lwd = 1, bty = "n")
+             col = c("black", "red", "blue"), lwd = 1, bty = "n", cex = 0.9)
 
       ## Lower right pane:
       ## Plot time vs. Global Reactive Power converted to numeric class with formatting.
